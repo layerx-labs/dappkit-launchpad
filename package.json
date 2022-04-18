@@ -23,6 +23,7 @@
   "files": [
     "config.mjs",
     "index.mjs",
+    "readme.md",
     "src"
   ]
 }
