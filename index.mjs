@@ -86,6 +86,12 @@ function main() {
     ... args.json ? JSON.parse(fs.readFileSync(args.json, 'utf8')) : {},
   };
 
+  if (options.asPackage) {
+    options.paths.abi = path.dirname(args.file);
+    options.paths.events = options?.output?.eventsDir;
+    options.paths.methods = options.paths.interfaces = options?.output?.interfaceDir
+  }
+
   if (!args.interfaceDir)
     args.interfaceDir = options?.output?.interfaceDir;
 
