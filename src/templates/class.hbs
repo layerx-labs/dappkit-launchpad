@@ -1,0 +1,23 @@
+{{imports}}
+
+export {{type}} {{modelName}}{{modelNameAppendix}} {
+  {{#if isModel}}
+  constructor(web3Connection: Web3Connection|Web3ConnectionOptions, contractAddress?: string) {
+    super(web3Connection, {{modelName}}Json.abi as AbiItem[], contractAddress);
+  }
+  {{/if}}
+
+  {{#if deployArgs}}
+  async deployJsonAbi({{abiInputs}}) {
+    const deployOptions = {
+      data: {{modelName}}Json.bytecode,
+      arguments: [
+        {{deployArguments}}
+      ]
+    }
+    return this.deploy(deployOptions, this.web3Connection.Account);
+  }
+  {{/if}}
+
+  {{content}}
+}

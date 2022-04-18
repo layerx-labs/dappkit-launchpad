@@ -1,0 +1,9 @@
+{{#if options.asPackage}}
+import {Model, Web3Connection, Web3ConnectionOptions, Deployable, XEvents} from '@taikai/dappkit';
+{{else}}
+import {Model} from '{{options.paths.base}}/model';
+import {Web3Connection} from '{{options.paths.base}}/web3-connection';
+import {Web3ConnectionOptions} from '{{options.paths.interfaces}}/web3-connection-options';
+import {Deployable} from '{{options.paths.interfaces}}/deployable';
+import {XEvents} from '{{options.paths.events}}/x-events';
+{{/if}}

@@ -1,0 +1,3 @@
+ { 
+    return this.{{#if isCall}}callTx{{else}}sendTx{{/if}}(this.contract.methods.{{methodName}}({{inputs}}));
+  }

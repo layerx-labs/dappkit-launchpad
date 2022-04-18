@@ -1,0 +1,6 @@
+{{#if comment}}
+  /**
+   * {{comment}}
+   */
+{{/if}}
+  {{#if isAsync}}async {{/if}}{{name}}({{inputs}}){{#if outputs}}: {{outputs}}{{/if}}{{#if content}}{{content}}{{/if}}

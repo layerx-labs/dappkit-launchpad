@@ -1,0 +1,3 @@
+  async get{{name}}Events(filter: PastEventOptions): Promise<XEvents<Events.{{name}}Event>[]> {
+    return this.contract.self.getPastEvents({{name}}, filter);
+  }
