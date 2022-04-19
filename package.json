@@ -5,10 +5,10 @@
   "module": "src/transpile.js",
   "type": "module",
   "bin": {
-    "transpile": "index.mjs"
+    "dk-transpile": "./bin/transpile.mjs"
   },
   "scripts": {
-    "transpile": "node index.mjs"
+    "transpile": "node ./bin/transpile.mjs"
   },
   "author": "moshmage@gmail.com",
   "license": "MIT",
@@ -22,8 +22,8 @@
   },
   "files": [
     "config.mjs",
-    "index.mjs",
     "readme.md",
-    "src"
+    "src",
+    "bin"
   ]
 }

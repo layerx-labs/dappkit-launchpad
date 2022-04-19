@@ -7,7 +7,7 @@ $ npm install dappkit-launchpad
 
 ## Usage
 ```bash
-$ node index.mjs -f path/to/your/contract/abi.json -j config.json
+$ dk-transpile -f path/to/your/contract/abi.json -j config.json
 ```
 
 ### Configuration
