@@ -2,7 +2,7 @@
 Solidity to Typescript transpile automator for @taikai/dappkit.
 
 ```bash
-$ npm install dappkit-launchpad
+$ npm install -g dappkit-launchpad
 ```
 
 ## Usage
