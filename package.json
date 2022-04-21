@@ -13,7 +13,8 @@
   },
   "scripts": {
     "transpile": "node ./bin/transpile.mjs",
-    "test": "echo"
+    "test": "echo",
+    "release": "np"
   },
   "author": "moshmage@gmail.com",
   "license": "MIT",
@@ -22,6 +23,9 @@
     "handlebars": "^4.7.7",
     "yargs": "^17.4.1"
   },
+  "devDependencies": {
+		"np": "*"
+	},
   "engines": {
     "node": ">=16"
   },
