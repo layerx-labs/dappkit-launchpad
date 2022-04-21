@@ -1,9 +1,13 @@
 {
-  "name": "dappkit-launchpad",
+  "name": "@taikai/dappkit-launchpad",
   "version": "0.0.1",
   "description": "@taikai/dappkit tool to parse Solidity ABI into typescript",
   "module": "src/transpile.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taikai/dappkit-launchpad.git"
+  },
   "bin": {
     "dk-transpile": "./bin/transpile.mjs"
   },
@@ -18,8 +22,15 @@
     "yargs": "^17.4.1"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "bugs": {
+    "url": "https://github.com/taikai/dappkit-launchpad/issues"
+  },
+  "homepage": "https://github.com/taikai/dappkit-launchpad#readme",
   "files": [
     "config.mjs",
     "readme.md",
