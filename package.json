@@ -12,7 +12,8 @@
     "dk-transpile": "./bin/transpile.mjs"
   },
   "scripts": {
-    "transpile": "node ./bin/transpile.mjs"
+    "transpile": "node ./bin/transpile.mjs",
+    "test": "echo"
   },
   "author": "moshmage@gmail.com",
   "license": "MIT",
