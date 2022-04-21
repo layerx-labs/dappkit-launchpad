@@ -24,7 +24,7 @@
     "yargs": "^17.4.1"
   },
   "devDependencies": {
-		"np": "*"
+    "np": "*"
 	},
   "engines": {
     "node": ">=16"
