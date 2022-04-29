@@ -33,19 +33,16 @@ All the cli options are available as a json configuration,
 |-|-|-|
 |**asPackage**||asPackage is a backwards compatability flag that should always be `true` and will be deprecated.|
 |**templatesDir**||source for the hbs templates. If you provide a custom path, you'll need to provide ALL templates|
-||
 |paths||paths works when `asPackage=false` and is a backwards compatability flag, it can be ignored as it will be deprecated|
 |paths|**base**|dappkit base folder|
 |paths|**abi**|where all abis are|
 |paths|**interfaces**|where interfaces are imported from/exported to|
 |paths|**methods**|where the methods are imported from/exported to|
 |paths|**events**|where the events are imported from/exported to|
-||
 |output||Output controls where the generated files will be created; Leaving it empty the file will be outputted to the terminal|
 |output|**interfaceDir**|folder for interfaces output|
 |output|**classDir**|folder for model extension output|
 |output|**eventsDir**|folder for events output|
-||
 |overwrite||Which files can be overwritten if already exist|
 |overwrite|**interface**||
 |overwrite|**class**||
