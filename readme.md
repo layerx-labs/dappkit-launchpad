@@ -94,3 +94,5 @@ All the cli options are available as a json configuration,
 }
 ```
 
+#### Templates
+Templates can essentially be used to complement customizations in a standard way, and by providing the `templatesDir` option on the configuration file along with all the [handlebars templates](./src/templates/) this is easily achievable. 
