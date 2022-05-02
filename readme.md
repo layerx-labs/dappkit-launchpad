@@ -9,6 +9,7 @@ $ npm install -g @taikai/dappkit-launchpad
 ```bash
 $ dk-transpile -f path/to/your/contract/abi.json
 ```
+
 ### CLI usage
 All non provided cli options will be overriden by their counterpart value on the json configuration, and if none exists a [default will be used](https://github.com/taikai/dappkit-launchpad/blob/master/config.mjs).
 ```bash
@@ -22,11 +23,31 @@ All non provided cli options will be overriden by their counterpart value on the
   -E, --overwriteEvent      allow event interface file overwrite (events will be
                              spawned on same folder as interface)
   -j, --json                json configuration file
-  -p, --asPackage           outputs imports from dappkit istead of source
+  -p, --asPackage           outputs imports from dappkit istead of source (deprecated)
   -h, --help                Show help                                 
 ```
 
-### JSON Configuration
+
+## Example
+Given the ERC20 standard from [`@openzepplin`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/token/ERC20/ERC20.sol) and its compilation json, `ERC20.json`, issuing
+
+```shell
+$ dk-transpile -f ERC20.json -i ./ -c ./ -e ./ -IEC
+```
+
+Will output,
+```bash
+$ dk-transpile -f ERC20.json -i ./interfaces -c ./classes -e ./events -IEC
+
+Created /interfaces/erc20.ts
+Created /classes/erc20.ts
+Created /events/erc20-events.ts
+```
+
+These proxies can then be customizable and will eventually [look like the one provided by @taikai/dappkit](https://github.com/taikai/dappkit/blob/master/src/models/erc20.ts).
+
+
+### Configuration
 All the cli options are available as a json configuration,
 
 |option||description|
@@ -72,3 +93,4 @@ All the cli options are available as a json configuration,
   templatesDir: "./src/templates"     // where to get the handlebars templates from, you'll need to provide ALL files
 }
 ```
+
