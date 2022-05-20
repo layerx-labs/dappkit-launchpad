@@ -121,7 +121,7 @@ function main() {
         makeOutputFile(args.interfaceDir, Parsed.interfaceClass);
     else logger(Parsed.interfaceClass, `Methods`)
 
-    if (args.eventsDir && Parsed.events)
+    if (args.eventsDir && Parsed.eventsClass)
         makeOutputFile(args.classDir, Parsed.eventsClass);
     else logger(Parsed.eventsClass, `Events`)
 }
