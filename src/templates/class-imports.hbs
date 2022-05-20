@@ -1,6 +1,6 @@
 {{libs}}
 import {{name}}Json from '{{options.paths.abi}}/{{name}}.json';
-import {{name}}Methods from '{{options.paths.methods}}/{{methodFileName}}';
+import { {{name}}Methods } from '{{options.paths.methods}}/{{methodFileName}}';
 {{#if events}}
 import * as Events from '{{options.paths.events}}/{{eventFileName}}'
 import {PastEventOptions} from 'web3-eth-contract';
