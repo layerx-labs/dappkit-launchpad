@@ -38,7 +38,7 @@ export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
             events: events.length > 0,
             name: modelName,
             methodFileName: paramCase(modelName),
-            eventFileName: paramCase(modelName).concat("Events"), 
+            eventFileName: paramCase(modelName), 
             options}),
         modelName, 
         modelNameAppendix: ` extends Model<${modelName}Methods> implements Deployable`,
