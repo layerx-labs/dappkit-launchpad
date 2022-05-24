@@ -122,7 +122,7 @@ function main() {
     else logger(Parsed.interfaceClass, `Methods`)
 
     if (args.eventsDir && Parsed.eventsClass)
-        makeOutputFile(args.classDir, Parsed.eventsClass);
+        makeOutputFile(args.eventsDir, Parsed.eventsClass);
     else logger(Parsed.eventsClass, `Events`)
 }
 
