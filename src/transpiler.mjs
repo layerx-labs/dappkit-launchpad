@@ -9,7 +9,7 @@ import parseTemplate from '../utils/parse-template.mjs';
 export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
   process.env = {... (process.env || {}), TEMPLATE_DIR: options.templatesDir} // make parseTemplate know where to look for files.
 
-  const contract = JSON.parse(fs.readFileSync(path.resolve(contractJsonFile)), 'utf-8');
+  const contract = JSON.parse(fs.readFileSync(path.resolve(contractJsonFile), "utf8"));
 
   const publicFns = contract.abi.filter((option) => !option.anonymous);
 

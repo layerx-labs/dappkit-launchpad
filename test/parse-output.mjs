@@ -20,8 +20,8 @@ describe(`parseOutput()`, () => {
 
     [
       `object multiple, primitive`,
-      [{components: [{type: "uint"}, {type: "address"}]}],
-      CallMethod`{  '0':  number;'1':  string; }`
+      [{components: [{type: "bytes"}, {type: "bytes[]"}]}],
+      CallMethod`{  '0':  string;'1':  string[]; }`
     ],
 
     [
@@ -32,8 +32,8 @@ describe(`parseOutput()`, () => {
 
     [
       `object multiple, edge`,
-      [{components: [{type: "uint"}]}, {type: "address"}],
-      CallMethod`{'0':  {  '0': number; } ;'1':  string;}`
+      [{components: [{type: "uint[]"}]}, {type: "address"}],
+      CallMethod`{'0':  {  '0': number[]; } ;'1':  string;}`
     ],
 
   ].forEach(([title, mock, expectation]) => {

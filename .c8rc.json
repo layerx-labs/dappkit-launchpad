@@ -2,5 +2,5 @@
   "all": true,
   "useSpawnWrap": true,
   "include": ["src/**.mjs", "utils/**.mjs"],
-  "exclude": ["node_modules/**"]
+  "exclude": ["node_modules/**", "utils/logger.mjs"]
 }
