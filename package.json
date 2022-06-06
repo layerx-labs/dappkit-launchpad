@@ -13,7 +13,7 @@
   },
   "scripts": {
     "transpile": "node ./bin/transpile.mjs",
-    "test": "echo",
+    "test": "mocha",
     "release": "np"
   },
   "author": "moshmage@gmail.com",
@@ -24,8 +24,10 @@
     "yargs": "^17.4.1"
   },
   "devDependencies": {
-    "np": "*"
-	},
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "np": "^7.6.1"
+  },
   "engines": {
     "node": ">=16"
   },
