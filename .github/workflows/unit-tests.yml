@@ -1,0 +1,20 @@
+name: unit tests
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.15.0]
+    steps:
+      - name: npm install
+        run: npm install
+      - name: unit tests
+        run: npm test
