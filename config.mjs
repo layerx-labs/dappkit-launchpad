@@ -17,5 +17,5 @@ export default {
     events: false
   },
   asPackage: true,
-  templatesDir: "./src/templates"
+  templatesDir: "./src/templates/"
 }

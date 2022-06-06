@@ -3,7 +3,7 @@ const SolidityTypes = {
   address: `string`,
   "string": `string`,
   event: `void`,
-  tuple: ``, // since we break down any typed tuple we can replace it for empty string
+  tuple: ``, // since we break down any typed tuple we can replace it for empty string // todo don't break typed tuples
 }
 
 const getSolidityType = (type = ``) => {

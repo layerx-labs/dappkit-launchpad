@@ -7,7 +7,7 @@ $ npm install -g @taikai/dappkit-launchpad
 
 ## Usage
 ```bash
-$ dk-transpile -f path/to/your/contract/abi.json
+$ dlt -f path/to/your/contract/abi.json
 ```
 
 ### CLI usage
