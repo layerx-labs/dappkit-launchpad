@@ -1,0 +1,6 @@
+{
+  "all": true,
+  "useSpawnWrap": true,
+  "include": ["src/**.mjs", "utils/**.mjs"],
+  "exclude": ["node_modules/**"]
+}

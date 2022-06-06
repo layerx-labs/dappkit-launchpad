@@ -9,11 +9,11 @@
     "url": "git+https://github.com/taikai/dappkit-launchpad.git"
   },
   "bin": {
-    "dk-transpile": "./bin/transpile.mjs"
+    "dlt": "./bin/transpile.mjs"
   },
   "scripts": {
     "transpile": "node ./bin/transpile.mjs",
-    "test": "mocha",
+    "test": "c8 --reporter=text mocha ",
     "release": "np"
   },
   "author": "moshmage@gmail.com",
@@ -24,6 +24,7 @@
     "yargs": "^17.4.1"
   },
   "devDependencies": {
+    "c8": "^7.11.3",
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
     "np": "^7.6.1"
