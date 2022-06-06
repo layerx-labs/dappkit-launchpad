@@ -33,7 +33,7 @@ describe(`parseOutput()`, () => {
     [
       `object multiple, edge`,
       [{components: [{type: "uint[]"}]}, {type: "address"}],
-      CallMethod`{'0':  {  '0': number[]; } ;'1':  string;}`
+      CallMethod`{'0':  {  '0':  number[]; } ;'1':  string;}`
     ],
 
   ].forEach(([title, mock, expectation]) => {

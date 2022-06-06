@@ -1,0 +1,32 @@
+{
+  "contractName": "Mock",
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {"type": "uint", "name": "_constructorArg"}
+      ]
+    },
+    {
+      "type": "function",
+      "name": "Function",
+      "inputs": [{"type": "uint", "name": "entryArg"}],
+      "outputs": [{"type": "uint", "name": ""}],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "Event",
+      "inputs": [
+        {"name": "eventArg", "type": "uint"}
+      ]
+    }
+  ],
+  "devdoc": {
+    "methods": {
+      "Function(uint)": {
+        "details": ""
+      }
+    }
+  }
+}

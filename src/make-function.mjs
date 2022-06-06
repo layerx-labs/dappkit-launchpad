@@ -17,7 +17,7 @@ export default function makeFunction(option, withBody = false, devDoc = "") {
   let functionBody = "";
 
   if (withBody) {
-    const inputs = option.inputs.map(({name}, i) =>  name || 'v'+i+1).join(`, `);
+    const inputs = option.inputs.map(({name}, i) =>  name || 'arg'+i+1).join(`, `);
     functionBody = parseTemplate("function-content", {methodName: option.name, inputs, isCall});
   } else parsedOutputs = parseOutput(option.outputs, isCall ? 'ContractCallMethod<%content%>;' : 'ContractSendMethod;', true);
 
