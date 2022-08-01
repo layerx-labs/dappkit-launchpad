@@ -29,10 +29,13 @@ export default function parseOutput(outputs, template = `ContractCallMethod<%con
   let content = outputs.map(_templateMapper).join(``);
 
   if (outputs.length === 1) {
-    content = content.replace("'0': ", "");
+    content = content.replace(/'0':\s+/, "");
     if (!outputs[0].name)
       content = content.replace(/;$/g, ``);
-  } else content = `{${content}}`;
+  }
+
+  if (outputs.length > 1 || outputs[0]?.name)
+    content = `{${content}}`
 
   return template.replace(`%content%`, content.trim());
 }
