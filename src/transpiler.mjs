@@ -21,7 +21,7 @@ export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
   const modelName = contract.contractName;
   const abiInputs = parseInputs(constructorInputs);
 
-  const devDocEntries = Object.entries(contract?.devdoc?.methods);
+  const devDocEntries = Object.entries(contract?.devdoc?.methods || []);
 
   const modelContent =
     functions.map(option => {
