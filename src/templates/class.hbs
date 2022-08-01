@@ -7,7 +7,6 @@ export {{type}} {{modelName}}{{modelNameAppendix}} {
   }
   {{/if}}
 
-  {{#if deployArgs}}
   async deployJsonAbi({{abiInputs}}) {
     const deployOptions = {
       data: {{modelName}}Json.bytecode,
@@ -17,7 +16,6 @@ export {{type}} {{modelName}}{{modelNameAppendix}} {
     }
     return this.deploy(deployOptions, this.web3Connection.Account);
   }
-  {{/if}}
 
   {{content}}
 }
