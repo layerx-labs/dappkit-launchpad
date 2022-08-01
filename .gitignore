@@ -1,4 +1,4 @@
 .idea
 node_modules/
-.dev-files/
+dev-files/
 coverage/
