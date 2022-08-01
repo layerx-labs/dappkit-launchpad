@@ -12,28 +12,30 @@ describe(`parseOutput()`, () => {
   [
     [`single, primitive`, [{type: "uint"}], CallMethod`number`],
 
+    [`single, primitive, unnamed`, [{type: "uint", name: ''}], CallMethod`number`],
+
     [
       `object single, primitive, named`,
       [{components: [{type: "uint", name: "num"},]}],
-      CallMethod`{  'num':  number; }`
+      CallMethod`{ 'num': number; }`
     ],
 
     [
       `object multiple, primitive`,
       [{components: [{type: "bytes"}, {type: "bytes[]"}]}],
-      CallMethod`{  '0':  string;'1':  string[]; }`
+      CallMethod`{ '0': string;'1': string[]; }`
     ],
 
     [
       `object multiple, object`,
       [{components: [{type: "uint"}, {components: [{type: "address"}]}]}],
-      CallMethod`{  '0':  number;'1':  {  '0':  string; } ; }`
+      CallMethod`{ '0': number;'1': { '0': string; }; }`
     ],
 
     [
       `object multiple, edge`,
       [{components: [{type: "uint[]"}]}, {type: "address"}],
-      CallMethod`{'0':  {  '0':  number[]; } ;'1':  string;}`
+      CallMethod`{'0': { '0': number[]; };'1': string;}`
     ],
 
   ].forEach(([title, mock, expectation]) => {
