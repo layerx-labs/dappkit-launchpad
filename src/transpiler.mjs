@@ -44,7 +44,7 @@ export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
         modelNameAppendix: ` extends Model<${modelName}Methods> implements Deployable`,
         type: "class",
         isModel: true,
-        deployArgs: abiInputs.length > 0,
+        deployJsonAbi: true,
         abiInputs,
         deployArguments: parseInputs(constructorInputs, undefined, true),
         content: modelContent
@@ -52,7 +52,7 @@ export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
 
   const interfaceClass = parseTemplate("class", {
     imports: parseTemplate("interface-imports", {options}),
-    type: "interface", modelName, modelNameAppendix: "Methods",
+    type: "interface", modelName, modelNameAppendix: "Methods", deployJsonAbi: false,
     content: functions.map(option => makeFunction(option, false)).join('\n')
   });
 
