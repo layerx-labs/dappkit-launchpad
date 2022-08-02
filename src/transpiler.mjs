@@ -56,7 +56,7 @@ export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
     content: functions.map(option => makeFunction(option, false)).join('\n')
   });
 
-  const eventsClass = [parseTemplate("event-imports"), events.map(o => makeEvent(o, false)).join('\n')].join('\n');
+  const eventsClass = events.length > 0 && [parseTemplate("event-imports"), events.map(o => makeEvent(o, false)).join('\n')].join('\n') || "";
 
   return {modelClass, eventsClass, interfaceClass}
 
