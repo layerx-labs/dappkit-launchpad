@@ -15,7 +15,7 @@ export {{type}} {{modelName}}{{modelNameAppendix}} {
         {{deployArguments}}
       ]
     }
-    return this.deploy(deployOptions, this.web3Connection.Account);
+    return this.deploy(deployOptions, this.connection.Account);
   }
   {{/if}}
 
