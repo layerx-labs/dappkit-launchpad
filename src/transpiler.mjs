@@ -34,14 +34,14 @@ export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
       {
         imports:
           parseTemplate("class-imports", {
-            libs: parseTemplate("libs-import", {options}),
+            libs: parseTemplate("libs-import", {options, hasEvents: events.length }),
             events: events.length > 0,
             name: modelName,
             methodFileName: paramCase(modelName),
             eventFileName: paramCase(modelName), 
             options}),
         modelName, 
-        modelNameAppendix: ` extends Model<${modelName}Methods> implements Deployable`,
+        modelNameAppendix: ` extends Model<${modelName}Methods${events.length > 0 ? ", Events.PromiEvents" : ""}> implements Deployable`,
         type: "class",
         isModel: true,
         deployJsonAbi: true,
@@ -56,7 +56,11 @@ export default function dappkitTranspiler(contractJsonFile = "", options = {}) {
     content: functions.map(option => makeFunction(option, false)).join('\n')
   });
 
-  const eventsClass = events.length > 0 && [events.map(o => makeEvent(o, false)).join('\n')].join('\n') || "";
+  const eventsClass = events.length > 0 && [
+    parseTemplate('event-imports', {options}),
+    events.map(o => makeEvent(o, false)).join('\n'),
+    parseTemplate('event-promievent', [events.map(e => e.name)]),
+  ].join('\n') || "";
 
   return {modelClass, eventsClass, interfaceClass}
 
