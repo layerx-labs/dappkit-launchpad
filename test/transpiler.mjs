@@ -22,6 +22,6 @@ describe(`dappkitTranspiler()`, () => {
   });
 
   it(`made getEventEvents()`, () => {
-    expect(modelClass).to.contain(`getEventEvents`).and.to.contain(`Promise<XEvents<Events.EventEvent>[]>`)
+    expect(modelClass).to.contain(`getEventEvents`).and.to.contain(`XPromiseEvent<Events.EventEvent>`)
   });
 });
