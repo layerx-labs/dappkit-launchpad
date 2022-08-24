@@ -88,7 +88,7 @@ function main() {
     };
 
     if (options.asPackage) {
-        options.paths.abi = path.dirname(args.file);
+        options.paths.abi = path.relative(options.output.classDir, path.dirname(args.file));
         options.paths.events = options?.output?.eventsDir;
         options.paths.methods = options.paths.interfaces = options?.output?.interfaceDir
     }

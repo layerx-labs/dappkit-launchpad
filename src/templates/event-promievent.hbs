@@ -1,3 +1,5 @@
 export interface PromiEvents {
-  {{#each this}}{{this}}: XPromiEvent<{{this}}Event>;{{/each}}
+  {{#each events}}
+    {{this}}: XPromiEvent<{{this}}Event>;
+  {{/each}}
 }
