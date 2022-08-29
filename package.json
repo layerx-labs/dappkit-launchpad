@@ -1,6 +1,6 @@
 {
   "name": "@taikai/dappkit-launchpad",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "@taikai/dappkit tool to parse Solidity ABI into typescript",
   "module": "src/transpile.mjs",
   "type": "module",
